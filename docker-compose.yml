@@ -7,8 +7,6 @@ services:
   app:
     image: nextcloud
     restart: always
-    links:
-      - db
     volumes:
       - nextcloud:/var/www/html
     environment:
