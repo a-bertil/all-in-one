@@ -11,7 +11,7 @@ services:
       - password=${COLLABORA_PASSWORD}
       - username=${COLLABORA_USERNAME}
       - domain=collabora
-      - extra_params=--o:ssl.enable=true
+      - extra_params=--o:ssl.enable=false
     ports:
       - 9980:9980
       
