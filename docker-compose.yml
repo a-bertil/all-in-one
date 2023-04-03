@@ -4,6 +4,17 @@ volumes:
   nextcloud:
 
 services:
+  code:
+    image: collabora/code:latest
+    restart: always
+    environment:
+      - password=${COLLABORA_PASSWORD}
+      - username=${COLLABORA_USERNAME}
+      - domain=collabora
+      - extra_params=--o:ssl.enable=true
+    ports:
+      - 9980:9980
+      
   app:
     image: nextcloud
     restart: always
